@@ -124,14 +124,14 @@
 //				    1234567890123456789012345678901234567890123456 */
 //#endif
 ///* *INDENT-ON* */
-//
-///* Define bzero() as a macro if it's not in standard C library. */
-//#ifndef	HAVE_BZERO
-//#define	bzero(ptr,n)		memset(ptr, 0, n)
-///* $$.If bzero$$ */
-///* $$.If memset$$ */
-//#endif
-//
+
+/* Define bzero() as a macro if it's not in standard C library. */
+#ifndef	HAVE_BZERO
+#define	bzero(ptr,n)		memset(ptr, 0, n)
+/* $$.If bzero$$ */
+/* $$.If memset$$ */
+#endif
+
 ///* Older resolvers do not have gethostbyname2() */
 //#ifndef	HAVE_GETHOSTBYNAME2
 //#define	gethostbyname2(host,family)		gethostbyname((host))
