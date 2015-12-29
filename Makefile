@@ -3,10 +3,10 @@ CC=gcc
 all: tcpserv tcpcli
 
 tcpserv: tcpserv.c netutil.c ioutil.c error.c
-	$(CC) -o $@ $?
+	$(CC) -o dist/$@ $?
 
 tcpcli: tcpcli.c netutil.c ioutil.c error.c
-	$(CC) -o $@ $?
+	$(CC) -o dist/$@ $?
 
 .PHONY: clean
 clean:
